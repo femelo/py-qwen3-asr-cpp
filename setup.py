@@ -60,20 +60,20 @@ class CMakeBuild(build_ext):
             f"-DPYTHON_EXECUTABLE={sys.executable}",
             f"-DCMAKE_BUILD_TYPE={cfg}",  # not used on MSVC, but no harm
         ]
-        if self.editable_mode:
-            # Platform-specific rpath settings
-            if sys.platform.startswith("darwin"):
-                # macOS-specific settings
-                cmake_args += [
-                    "-DCMAKE_INSTALL_RPATH=@loader_path",
-                    "-DCMAKE_BUILD_WITH_INSTALL_RPATH=ON",
-                ]
-            elif sys.platform.startswith("linux"):
-                # Linux-specific settings
-                cmake_args += [
-                    "-DCMAKE_INSTALL_RPATH=$ORIGIN",
-                    "-DCMAKE_BUILD_WITH_INSTALL_RPATH=ON",
-                ]
+
+        # Platform-specific rpath settings
+        if sys.platform.startswith("darwin"):
+            # macOS-specific settings
+            cmake_args += [
+                "-DCMAKE_INSTALL_RPATH=@loader_path",
+                "-DCMAKE_BUILD_WITH_INSTALL_RPATH=ON",
+            ]
+        elif sys.platform.startswith("linux"):
+            # Linux-specific settings
+            cmake_args += [
+                "-DCMAKE_INSTALL_RPATH=$ORIGIN",
+                "-DCMAKE_BUILD_WITH_INSTALL_RPATH=ON",
+            ]
 
         build_args = []
         # Adding CMake arguments set as environment variable
@@ -260,7 +260,9 @@ setup(
     packages=find_packages("."),
     package_dir={"": "."},
     include_package_data=True,
-    package_data={"py_qwen3_asr_cpp": []},
+    package_data={
+        "py_qwen3_asr_cpp": ["*.so", "*.so.*", "*.dylib", "*.dll"],
+    },
     long_description_content_type="text/markdown",
     license="MIT",
     entry_points={
