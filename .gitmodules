@@ -1,0 +1,6 @@
+[submodule "pybind11"]
+	path = pybind11
+	url = https://github.com/pybind/pybind11
+[submodule "qwen3-asr.cpp"]
+	path = qwen3-asr.cpp
+	url = https://github.com/femelo/qwen3-asr.cpp
