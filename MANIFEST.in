@@ -1,0 +1,14 @@
+include README.md LICENSE pybind11/LICENSE version.txt
+graft pybind11/include
+graft pybind11/tools
+graft src
+global-include CMakeLists.txt *.cmake
+
+graft qwen3-asr.cpp/ggml
+graft qwen3-asr.cpp/src
+exclude qwen3-asr.cpp/**/*.o
+exclude qwen3-asr.cpp/**/*.so
+exclude qwen3-asr.cpp/**/*.a
+exclude qwen3-asr.cpp/**/*.dylib
+exclude qwen3-asr.cpp/**/*.dll
+exclude qwen3-asr.cpp/**/*.lib
