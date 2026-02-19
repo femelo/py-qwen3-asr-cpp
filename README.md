@@ -32,7 +32,7 @@ from py_qwen3_asr_cpp.model import Qwen3ASRModel
 
 # Initialize the model (it handles downloading if a repo ID is provided)
 model = Qwen3ASRModel(
-    asr_model="qwen3-asr-0.6b-q8_0",
+    asr_model="qwen3-asr-0.6b-q8-0",
     n_threads=4
 )
 
@@ -47,8 +47,8 @@ Align a known text transcript to an audio file to obtain word-level timestamps.
 
 ```python
 model = Qwen3ASRModel(
-    asr_model="qwen3-asr-0.6b-q8_0",
-    align_model="qwen3-forced-aligner-0.6b-q8_0"
+    asr_model="qwen3-asr-0.6b-q8-0",
+    align_model="qwen3-forced-aligner-0.6b-q8-0"
 )
 
 # Text to align with the audio
