@@ -14,8 +14,8 @@ QWEN_N_SAMPLES = QWEN_SAMPLE_RATE * QWEN_CHUNK_SIZE  # 480000
 QWEN_N_FFT_BINS = 1 + (QWEN_N_FFT / 2)  # 201 positive frequency bins
 
 
-# example: "https://huggingface.co/OpenVoiceOS/resolve/main/qwen3-asr-0.6b-f16.gguf"
-MODEL_URL_TEMPLATE = "https://huggingface.co/OpenVoiceOS/resolve/main/{model}.gguf"
+# example: "https://huggingface.co/OpenVoiceOS/qwen3-asr-0.6b-f16/resolve/main/qwen3-asr-0.6b-f16.gguf"
+MODEL_URL_TEMPLATE = "https://huggingface.co/OpenVoiceOS/{model}/resolve/main/{model}.gguf"
 
 PACKAGE_NAME = "py_qwen3_asr_cpp"
 MODELS_DIR = Path(user_data_dir(PACKAGE_NAME)) / "models"
