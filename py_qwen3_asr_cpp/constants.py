@@ -24,15 +24,15 @@ MODELS_DIR = Path(user_data_dir(PACKAGE_NAME)) / "models"
 AVAILABLE_MODELS = {
     "asr": [
         "qwen3-asr-0.6b-f16",
-        "qwen3-asr-0.6b-q8_0",
-        "qwen3-asr-0.6b-q5_k_m",
-        "qwen3-asr-0.6b-q4_k_m",
+        "qwen3-asr-0.6b-q8-0",
+        "qwen3-asr-0.6b-q5-k-m",
+        "qwen3-asr-0.6b-q4-k-m",
     ],
     "aligner": [
         "qwen3-forced-aligner-0.6b-f16",
-        "qwen3-forced-aligner-0.6b-q8_0",
-        "qwen3-forced-aligner-0.6b-q5_k_m",
-        "qwen3-forced-aligner-0.6b-q4_k_m",
+        "qwen3-forced-aligner-0.6b-q8-0",
+        "qwen3-forced-aligner-0.6b-q5-k-m",
+        "qwen3-forced-aligner-0.6b-q4-k-m",
     ],
 }
 

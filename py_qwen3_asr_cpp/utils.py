@@ -75,7 +75,7 @@ def download_model(
         total = int(resp.headers.get("content-length", 0))
 
         progress_bar = tqdm(
-            desc=f"Downloading Model {model_name} ...",
+            desc=f"Downloading {model_name} ...",
             total=total,
             unit="iB",
             unit_scale=True,
