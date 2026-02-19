@@ -33,7 +33,12 @@ def _get_model_url(model_name: str) -> str:
     :param model_name: name of the model
     :return: URL of the model
     """
-    return MODEL_URL_TEMPLATE.format(model=model_name)
+    file_name = (
+        model_name.replace("q8-0", "q8_0")
+        .replace("q5-k-m", "q5_k_m")
+        .replace("q4-k-m", "q4_k_m")
+    )
+    return MODEL_URL_TEMPLATE.format(model=model_name, file_name=file_name)
 
 
 def download_model(
