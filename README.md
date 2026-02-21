@@ -38,7 +38,7 @@ model = Qwen3ASRModel(
 
 # Transcribe from file
 result = model.transcribe("audio.mp3")
-print(f"Detected Language: {result.language}")
+print(f"Detected language: {result.language}")
 print(f"Transcription: {result.text}")
 ```
 
@@ -57,7 +57,7 @@ text = "The quick brown fox jumps over the lazy dog"
 alignment = model.align("audio.wav", text=text)
 
 for word in alignment.words:
-    print(f"Word: {word.text:12} | Start: {word.start_ms}ms | End: {word.end_ms}ms")
+    print(f"Word: {word.word:12} | Start: {word.start}ms | End: {word.end}ms")
 ```
 
 ### 3. Pipeline and Configuration
@@ -68,8 +68,8 @@ Transcribe and immediately align to get the best of both worlds in one call.
 ```python
 asr_res, align_res = model.transcribe_and_align("interview.wav")
 
-print(f"Full Text: {asr_res.text}")
-print(f"Total Words Aligned: {len(align_res.words)}")
+print(f"Full text: {asr_res.text}")
+print(f"Total words aligned: {len(align_res.words)}")
 ```
 
 ## ⚙️ Configuration

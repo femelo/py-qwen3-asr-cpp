@@ -55,7 +55,7 @@ def download_model(
 
     :return: Absolute path of the downloaded model
     """
-    available_models = AVAILABLE_MODELS[ModelType.ASR]
+    available_models = AVAILABLE_MODELS[model_type]
     if model_name not in available_models:
         logger.error(
             f"Invalid model name `{model_name}`, available models are: {available_models}"
