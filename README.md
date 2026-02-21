@@ -57,7 +57,7 @@ text = "The quick brown fox jumps over the lazy dog"
 alignment = model.align("audio.wav", text=text)
 
 for word in alignment.words:
-    print(f"Word: {word.word:12} | Start: {word.start}ms | End: {word.end}ms")
+    print(f"Word: {word.word:12} | Start: {word.start:0.2f}ms | End: {word.end:0.2f}ms")
 ```
 
 ### 3. Pipeline and Configuration
