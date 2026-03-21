@@ -2,7 +2,7 @@
  ********************************************************************************
  * @file    main.cpp
  * @author  [femelo](https://github.com/femelo)
- * @date    2023
+ * @date    2026
  * @brief   Python bindings for [qwen3-asr.cpp](https://github.com/predict-woo/qwen3-asr.cpp) using Pybind11
  *
  * @par
