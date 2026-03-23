@@ -7,6 +7,10 @@ if(CMAKE_CXX_COMPILER_ID MATCHES "GNU|Clang")
     set(CMAKE_CXX_FLAGS_DEBUG "${CMAKE_CXX_FLAGS_DEBUG} -g -O0")
 endif()
 
+if(APPLE)
+    enable_language(OBJC OBJCXX)
+endif()
+
 add_subdirectory(pybind11)
 add_subdirectory(qwen3-asr.cpp)
 
