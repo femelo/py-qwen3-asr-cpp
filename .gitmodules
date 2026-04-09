@@ -4,3 +4,4 @@
 [submodule "qwen3-asr.cpp"]
 	path = qwen3-asr.cpp
 	url = https://github.com/femelo/qwen3-asr.cpp
+	branch = fix-forced-aligner-tokenizer
